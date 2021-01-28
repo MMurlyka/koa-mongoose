@@ -37,7 +37,7 @@ const middleware = (options = {}) => {
 
   // Load each schema by it's key
   Object.keys(schemas).forEach(schemaName => {
-    models[schemaName] = connection.model(schemaName, schemas[schemaName](mongoose));
+    models[schemaName] = connection.model(schemaName, schemas[schemaName]);
   });
 
   // Load each event by it's key
